@@ -506,9 +506,47 @@ def interestsFunction():
         pass
 
 
-
     if stopConnect in interestsResponse: 
         exit()
+    else:
+        pass
+
+    if abuseWord in interestsResponse:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+    else:
+        pass
+
+    if suicideWord in interestsResponse:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+    else:
+        pass
+
+    if helpWord in interestsResponse:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
     else:
         pass
 
@@ -609,6 +647,39 @@ if coping in chatDecide:
 elif stopConnect in chatDecide:
     exit()
 
+elif abuseWord in chatDecide:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in chatDecide:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in chatDecide:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
 else:
     print("\n")
     print("I'm glad you reached out for help. I will ask you some simple questions to help guide you to the correct hotline.")
@@ -654,7 +725,29 @@ elif no in immediateEmergency:
 elif stopConnect in immediateEmergency:
     exit()
 
-elif abuseWord or suicideWord or helpWord in immediateEmergency:
+elif abuseWord in immediateEmergency:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in immediateEmergency:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in immediateEmergency:
     print("\n")
     immediateEmergencyFunction()
     print("\n")
@@ -703,9 +796,33 @@ if no in talkAloud:
         print("\n")
         print("The following questions will provide hotlines that require you to talk aloud. We will continue to chat.")
         time.sleep(2)
+
     elif stopConnect in checkTalkAloud:
         exit()
-    elif abuseWord or suicideWord or helpWord in checkTalkAloud:
+
+    elif abuseWord in checkTalkAloud:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif suicideWord in checkTalkAloud:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif helpWord in checkTalkAloud:
         print("\n")
         immediateEmergencyFunction()
         print("\n")
@@ -725,7 +842,29 @@ elif yes in talkAloud:
 elif stopConnect in talkAloud:
     exit()
 
-elif abuseWord or suicideWord or helpWord in talkAloud:
+elif abuseWord in talkAloud:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in talkAloud:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in talkAloud:
     print("\n")
     immediateEmergencyFunction()
     print("\n")
@@ -813,7 +952,29 @@ if no in safeEnvironment:
         elif stopConnect in abuse:
             exit()
         
-        elif abuseWord or suicideWord or helpWord in abuse:
+        elif abuseWord in abuse:
+            print("\n")
+            immediateEmergencyFunction()
+            print("\n")
+            time.sleep(2)
+            suicidePrevention()
+            print("\n")
+            time.sleep(2)
+
+            checkRight()
+
+        elif suicideWord in abuse:
+            print("\n")
+            immediateEmergencyFunction()
+            print("\n")
+            time.sleep(2)
+            suicidePrevention()
+            print("\n")
+            time.sleep(2)
+
+            checkRight()
+
+        elif helpWord in abuse:
             print("\n")
             immediateEmergencyFunction()
             print("\n")
@@ -830,7 +991,29 @@ if no in safeEnvironment:
     elif stopConnect in domesticAbuse:
         exit()
     
-    elif abuseWord or suicideWord or helpWord in domesticAbuse:
+    elif abuseWord in domesticAbuse:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif suicideWord in domesticAbuse:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif helpWord in domesticAbuse:
         print("\n")
         immediateEmergencyFunction()
         print("\n")
@@ -854,7 +1037,29 @@ elif yea in safeEnvironment:
 elif stopConnect in safeEnvironment:
     exit()
 
-elif abuseWord or suicideWord or helpWord in safeEnvironment:
+elif abuseWord in safeEnvironment:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in safeEnvironment:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in safeEnvironment:
     print("\n")
     immediateEmergencyFunction()
     print("\n")
@@ -906,7 +1111,29 @@ elif yea in othersSafety:
 elif stopConnect in othersSafety:
     exit()
 
-elif abuseWord or suicideWord or helpWord in othersSafety:
+elif abuseWord in othersSafety:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in othersSafety:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in othersSafety:
     print("\n")
     immediateEmergencyFunction()
     print("\n")
@@ -959,7 +1186,7 @@ elif no in identityIssues:
 elif stopConnect in identityIssues:
     exit()
 
-elif abuseWord or suicideWord or helpWord in identityIssues:
+elif abuseWord in identityIssues:
     print("\n")
     immediateEmergencyFunction()
     print("\n")
@@ -969,6 +1196,29 @@ elif abuseWord or suicideWord or helpWord in identityIssues:
     time.sleep(2)
 
     checkRight()
+
+elif suicideWord in identityIssues:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in identityIssues:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
 
 else: 
     print("\n")
@@ -1003,7 +1253,29 @@ elif no in substanceAbuse:
 elif stopConnect in substanceAbuse:
     exit()
 
-elif abuseWord or suicideWord or helpWord in substanceAbuse:
+elif abuseWord in substanceAbuse:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in substanceAbuse:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in substanceAbuse:
     print("\n")
     immediateEmergencyFunction()
     print("\n")
@@ -1047,7 +1319,29 @@ elif no in eatingDisorder:
 elif stopConnect in eatingDisorder:
     exit()
 
-elif abuseWord or suicideWord or helpWord in eatingDisorder:
+elif abuseWord in eatingDisorder:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in eatingDisorder:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in eatingDisorder:
     print("\n")
     immediateEmergencyFunction()
     print("\n")
@@ -1101,7 +1395,29 @@ elif no in runaway:
 elif stopConnect in runaway:
     exit()
 
-elif abuseWord or suicideWord or helpWord in runaway:
+elif abuseWord in runaway:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in runaway:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in runaway:
     print("\n")
     immediateEmergencyFunction()
     print("\n")
@@ -1141,7 +1457,7 @@ elif yea in racialEquity:
 elif stopConnect in racialEquity:
     exit()
 
-elif abuseWord or suicideWord or helpWord in racialEquity:
+elif abuseWord in racialEquity:
     print("\n")
     immediateEmergencyFunction()
     print("\n")
@@ -1151,6 +1467,33 @@ elif abuseWord or suicideWord or helpWord in racialEquity:
     time.sleep(2)
 
     checkRight()
+
+elif suicideWord in racialEquity:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in racialEquity:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+
+elif no in racialEquity:
+    print("\n")
+    pass
 
 else: 
     print("\n")
@@ -1163,6 +1506,7 @@ generalCrisisQ = input("> ")
 generalCrisis = generalCrisisQ.upper()
 
 if sad or depressed or empty or numb or bad or useless in generalCrisis:
+    print("\n")
     print("Would you like to talk to another teen about your feelings?")
     generalCrisisYouthQ = input("> ")
     generalCrisisYouth = generalCrisisYouthQ.upper()
@@ -1183,10 +1527,40 @@ if sad or depressed or empty or numb or bad or useless in generalCrisis:
 
         checkRight()
 
+    elif no in generalCrisisYouth:
+        print("\n")
+        namiFunction()
+        time.sleep(2)
+        print("\n")
+
+        checkRight()
+
     elif stopConnect in generalCrisisYouth:
         exit()
 
-    elif abuseWord or suicideWord or helpWord in generalCrisisYouth:
+    elif abuseWord in generalCrisisYouth:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif suicideWord in generalCrisisYouth:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif helpWord in generalCrisisYouth:
         print("\n")
         immediateEmergencyFunction()
         print("\n")
@@ -1227,7 +1601,29 @@ elif good or okay or better or happy or calm in generalCrisis:
 elif stopConnect in generalCrisis:
     exit()
 
-elif abuseWord or suicideWord or helpWord in generalCrisis:
+elif abuseWord in generalCrisis:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in generalCrisis:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in generalCrisis:
     print("\n")
     immediateEmergencyFunction()
     print("\n")
@@ -1250,6 +1646,7 @@ feelingOverall = feelingOverallQ.upper()
 
 if yes in feelingOverall:
     #------------------------final support/coping mechanisms
+    print("\n")
     print("I am so glad you are feeling better!")
     time.sleep(2)
     print("\n")
@@ -1268,6 +1665,7 @@ if yes in feelingOverall:
 
 elif yea in feelingOverall:
     #------------------------final support/coping mechanisms
+    print("\n")
     print("I am so glad you are feeling better!")
     time.sleep(2)
     print("\n")
@@ -1284,6 +1682,41 @@ elif yea in feelingOverall:
 
     goodbye()
 
+elif stopConnect in feelingOverall:
+    exit()
+
+elif abuseWord in feelingOverall:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in feelingOverall:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in feelingOverall:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
 
 else:
     print("Before you go, let's walk through some coping mechanisms.")
