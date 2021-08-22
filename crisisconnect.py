@@ -764,7 +764,11 @@ print("Do you fear that you are putting others in danger?")
 othersSafetyQ = input("> ")
 othersSafety = othersSafetyQ.upper()
 
-if yes in othersSafety:
+if no in othersSafety:
+    print("\n")
+    pass
+
+elif yes in othersSafety:
     print("\n")
     print("The National Domestic Hotline can also be used if you feel you are causing pain and want to stop.")
     time.sleep(3.75)
@@ -802,8 +806,6 @@ elif abuseWord or suicideWord or helpWord in othersSafety:
 
     checkRight()
 
-elif no in othersSafety:
-    pass
 
 else:
     print("\n")
