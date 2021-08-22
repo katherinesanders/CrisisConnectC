@@ -13,7 +13,6 @@ yes = "YES"
 yea = "YEA"
 no = "NO"
 dontKnow = "DONT KNOW"
-dontKnow1 = "DON'T KNOW"
 #------------chat bot or coping mechanisms
 hotline = "HOTLINE"
 helpline = "HELPLINE"
@@ -46,7 +45,7 @@ movies = "MOVIES"
 reading = "READING"
 music = "MUSIC"
 draw = "DRAW"
-write = "WRITING"
+write = "WRITE"
 sleep = "SLEEP"
 eat = "EAT"
 food = "FOOD"
@@ -250,7 +249,22 @@ def interestsFunction():
 
     interestsResponse = interests.split()
 
+    if sleep in interestsResponse:
+        print("\n")
+        print("Ah yes. Sleep is really nice.")
+        time.sleep(2)
+        print("\n")
+        print("I recommend you draw, write, watch a show, or listen to some music before you sleep if you aren't feeling completely well.")
+        time.sleep(4)
+        print("\n")
+        print("After that, you should take a big, long nap: you deserve it.")
+        time.sleep(2.5)
+        print("\n")
+    else:
+        pass
+
     if shows in interestsResponse:
+        print("\n")
         print("Spoil yourself to your favorite movie or rewatch your favorite TV show - or start a new one.")
         time.sleep(3)
         print("\n")
@@ -272,6 +286,7 @@ def interestsFunction():
         pass
     
     if reading in interestsResponse: 
+        print("\n")
         print("Try to dig up an old book from your childhood and reread it.")
         time.sleep(4)
         print("\n")
@@ -279,6 +294,7 @@ def interestsFunction():
         pass
 
     if music in interestsResponse: 
+        print("\n")
         print("Treat yourself to 30 minutes of listening to music.")
         time.sleep(2)
         print("\n")
@@ -289,6 +305,7 @@ def interestsFunction():
         pass
 
     if write in interestsResponse: 
+        print("\n")
         print("Journal for 5 minutes. I will randomly choose a word for you, and you write what comes to mind:")
         time.sleep(3)
         print("\n")
@@ -300,6 +317,7 @@ def interestsFunction():
         pass
 
     if draw in interestsResponse:
+        print("\n")
         print("Draw for 30 minutes. I will randomly choose a word for you, and you draw what comes to mind:")
         time.sleep(3)
         print("\n")
@@ -310,19 +328,8 @@ def interestsFunction():
     else:
         pass
 
-    if sleep in interestsResponse:
-        print("Ah yes. Sleep is really nice.")
-        time.sleep(2)
-        print("I recommend you draw, write, watch a show, or listen to some music before you sleep if you aren't feeling completely well.")
-        time.sleep(4)
-        print("\n")
-        print("After that, you should take a big, long nap: you deserve it.")
-        time.sleep(2.5)
-        print("\n")
-    else:
-        pass
-
     if eat in interestsResponse:
+        print("\n")
         print("I challenge you to create something knew.")
         time.sleep(2.5)
         print("What's something you've always wanted to try? Try to create a new meal out of the things you have at home!")
@@ -331,7 +338,7 @@ def interestsFunction():
     else:
         pass
 
-    if dontKnow or dontKnow1 or nothing in interestsResponse:
+    if dontKnow in interestsResponse:
         print("\n")
         print("I challenge you to do something knew.")
         time.sleep(2.5)
@@ -347,6 +354,7 @@ def interestsFunction():
         anotherActivity = anotherActivityQ.upper()
 
         if yes in anotherActivity:
+            print("\n")
             print("I challenge you to:")
             time.sleep(2)
             print(random.choice(activities1))
@@ -364,13 +372,15 @@ def interestsFunction():
                 print(random.choice(activities2))
                 time.sleep(4)
                 print("\n")
-            elif yea in anotherActivity:
+            elif yea in anotherActivity1:
                 print("\n")
                 print("I challenge you to:")
                 time.sleep(2)
                 print(random.choice(activities1))
                 time.sleep(4)
                 print("\n")
+            elif stopConnect in anotherActivity1:
+                exit()
             else: 
                 pass
 
@@ -393,23 +403,117 @@ def interestsFunction():
                 print(random.choice(activities2))
                 time.sleep(4)
                 print("\n")
-            elif yea in anotherActivity:
+            elif yea in anotherActivity1:
                 print("\n")
                 print("I challenge you to:")
                 time.sleep(2)
                 print(random.choice(activities1))
                 time.sleep(4)
                 print("\n")
+            elif stopConnect in anotherActivity1:
+                exit()
             else: 
                 pass
-
+        elif stopConnect in anotherActivity:
+            exit()
         else: 
             pass
 
+    #or isnt working
+    elif nothing in interestsResponse:
+        print("\n")
+        print("I challenge you to do something knew.")
+        time.sleep(2.5)
+        print("\n")
+        print("I will randomize an easy activity for you to do:")
+        time.sleep(2)
+        print(random.choice(activities))
+        time.sleep(4)
+        print("\n")
+
+        print("Do you want another activity?")
+        anotherActivityQ = input("> ")
+        anotherActivity = anotherActivityQ.upper()
+
+        if yes in anotherActivity:
+            print("\n")
+            print("I challenge you to:")
+            time.sleep(2)
+            print(random.choice(activities1))
+            time.sleep(4)
+            print("\n")
+
+            print("Do you want another activity?")
+            anotherActivity1Q = input("> ")
+            anotherActivity1 = anotherActivity1Q.upper()
+
+            if yes in anotherActivity1:
+                print("\n")
+                print("I challenge you to:")
+                time.sleep(2)
+                print(random.choice(activities2))
+                time.sleep(4)
+                print("\n")
+            elif yea in anotherActivity1:
+                print("\n")
+                print("I challenge you to:")
+                time.sleep(2)
+                print(random.choice(activities1))
+                time.sleep(4)
+                print("\n")
+            elif stopConnect in anotherActivity1:
+                exit()
+            else: 
+                pass
+
+        elif yea in anotherActivity:
+            print("\n")
+            print("I challenge you to:")
+            time.sleep(2)
+            print(random.choice(activities1))
+            time.sleep(4)
+            print("\n")
+
+            print("Do you want another activity?")
+            anotherActivity1Q = input("> ")
+            anotherActivity1 = anotherActivity1Q.upper()
+
+            if yes in anotherActivity1:
+                print("\n")
+                print("I challenge you to:")
+                time.sleep(2)
+                print(random.choice(activities2))
+                time.sleep(4)
+                print("\n")
+            elif yea in anotherActivity1:
+                print("\n")
+                print("I challenge you to:")
+                time.sleep(2)
+                print(random.choice(activities1))
+                time.sleep(4)
+                print("\n")
+            elif stopConnect in anotherActivity1:
+                exit()
+            else: 
+                pass
+        elif stopConnect in anotherActivity:
+            exit()
+        else: 
+            pass
+    elif stopConnect in interestsResponse:
+        exit()
+    else:
+        pass
+
+
+
+    if stopConnect in interestsResponse: 
+        exit()
     else:
         pass
 
 def goodbye():
+    print("\n")
     print("I hope you found the help you needed. You are an important part of this world. <3")
     time.sleep(2)
     print("\n")
@@ -501,7 +605,12 @@ if coping in chatDecide:
     interestsFunction()
 
     goodbye()
+
+elif stopConnect in chatDecide:
+    exit()
+
 else:
+    print("\n")
     print("I'm glad you reached out for help. I will ask you some simple questions to help guide you to the correct hotline.")
     time.sleep(4.75)
     print("\n")
