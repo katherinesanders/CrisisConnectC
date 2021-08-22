@@ -502,6 +502,8 @@ if coping in chatDecide:
 
     goodbye()
 else:
+    print("I'm glad you reached out for help. I will ask you some simple questions to help guide you to the correct hotline.")
+    time.sleep(4.75)
     print("\n")
     pass
 
