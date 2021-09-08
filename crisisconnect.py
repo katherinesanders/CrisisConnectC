@@ -64,6 +64,8 @@ hateMyself = "HATE MYSELF"
 cantLive = "CANT LIVE"
 dont = "DONT"
 idk = "IDK"
+feel = "FEEL"
+not = "NOT"
 #----------------domestic abuse
 girlfriend = "GIRLFRIEND"
 boyfriend = "BOYFRIEND"
@@ -81,7 +83,13 @@ sister = "SISTER"
 brother = "BROTHER"
 hit = "HIT"
 hurt = "HURT"
-#-------------_--LGBTQ & identity
+#---------------Rape, Incest 
+touch = "TOUCH"
+nonconsensual = "NONCONSENSUAL"
+consent = "CONSENT"
+grope = "GROPE"
+make = "MAKE"
+#---------------LGBTQ & identity 
 #----------------substance abuse
 drugs = "DRUGS"
 alcohol = "ALCOHOL"
@@ -89,6 +97,9 @@ vape = "VAPE"
 vaping = "VAPING"
 #-----------------eating disorder
 cantEat = "CANT EAT"
+wontEat = "WONT EAT"
+throwUp = "THROW UP"
+body = "BODY"
 #--------------------------------
 
 
@@ -834,7 +845,7 @@ generalSituationUpper = generalSituationQ.upper()
 
 generalSituation = generalSituationUpper.split()
 
-
+print("I’m sorry that’s happening to you. How does this make you feel?")
 
 
 
