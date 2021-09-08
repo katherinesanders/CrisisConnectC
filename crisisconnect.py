@@ -1,6 +1,7 @@
 #
 # Katherine Sanders - "CrisisConnect"
 # Creatica 2021
+# Congressional App Challenge 2021
 # August 22
 #
 
@@ -18,6 +19,7 @@ dontKnow = "DONT KNOW"
 hotline = "HOTLINE"
 helpline = "HELPLINE"
 coping = "COPING"
+cope = "COPE"
 #------------emotions
 #---bad
 sad = "SAD"
@@ -55,6 +57,40 @@ prompts = ["Challenges", "Gratitude", "Elementary School", "Fear", "The Past", "
 activities = ["Paint a random object", "Go outside without shoes on", "Sew something"]
 activities1 = ["Meditate", "Online shop", "Organize your space", "Redecorate"]
 activities2 = ["Learn a new skill", "Play video games"]
+
+#-------------------------------NEW VARIABLES-----------------------
+#----------------general terms
+hateMyself = "HATE MYSELF" 
+cantLive = "CANT LIVE"
+dont = "DONT"
+idk = "IDK"
+#----------------domestic abuse
+girlfriend = "GIRLFRIEND"
+boyfriend = "BOYFRIEND"
+bf = "BF"
+gf = "GF"
+partner = "PARTNER"
+wife = "WIFE"
+husband = "HUSBAND"
+spouse - "SPOUSE"
+mom = "MOM"
+mother = "MOTHER"
+dad = "DAD"
+father = "FATHER"
+sister = "SISTER"
+brother = "BROTHER"
+hit = "HIT"
+hurt = "HURT"
+#-------------_--LGBTQ & identity
+#----------------substance abuse
+drugs = "DRUGS"
+alcohol = "ALCOHOL"
+vape = "VAPE"
+vaping = "VAPING"
+#-----------------eating disorder
+cantEat = "CANT EAT"
+#--------------------------------
+
 
 #------------------------Requesting Hotlines
 def immediateEmergencyFunction():
@@ -261,6 +297,95 @@ def interestsFunction():
         print("After that, you should take a big, long nap: you deserve it.")
         time.sleep(2.5)
         print("\n")
+
+        
+        print("\n")
+        print("I challenge you to do something knew.")
+        time.sleep(2.5)
+        print("\n")
+        print("I will randomize an easy activity for you to do:")
+        time.sleep(2)
+        print(random.choice(activities))
+        time.sleep(4)
+        print("\n")
+
+        print("Do you want another activity?")
+        another1ActivityQ = input("> ")
+        another1Activity = another1ActivityQ.upper()
+
+        if yes in another1Activity:
+            print("\n")
+            print("I challenge you to:")
+            time.sleep(2)
+            print(random.choice(activities1))
+            time.sleep(4)
+            print("\n")
+
+            print("Do you want another activity?")
+            another1Activity1Q = input("> ")
+            another1Activity1 = another1Activity1Q.upper()
+
+            if yes in another1Activity1:
+                print("\n")
+                print("I challenge you to:")
+                time.sleep(2)
+                print(random.choice(activities2))
+                time.sleep(4)
+                print("\n")
+            elif yea in another1Activity1:
+                print("\n")
+                print("I challenge you to:")
+                time.sleep(2)
+                print(random.choice(activities1))
+                time.sleep(4)
+                print("\n")
+            elif no in another1Activity1:
+                pass
+            elif stopConnect in another1Activity1:
+                exit()
+            else: 
+                pass
+
+        elif yea in another1Activity:
+            print("\n")
+            print("I challenge you to:")
+            time.sleep(2)
+            print(random.choice(activities1))
+            time.sleep(4)
+            print("\n")
+
+            print("Do you want another activity?")
+            another1Activity1Q = input("> ")
+            another1Activity1 = another1Activity1Q.upper()
+
+            if yes in another1Activity1:
+                print("\n")
+                print("I challenge you to:")
+                time.sleep(2)
+                print(random.choice(activities2))
+                time.sleep(4)
+                print("\n")
+            elif yea in another1Activity1:
+                print("\n")
+                print("I challenge you to:")
+                time.sleep(2)
+                print(random.choice(activities1))
+                time.sleep(4)
+                print("\n")
+            elif no in another1Activity1:
+                pass
+            elif stopConnect in another1Activity1:
+                exit()
+            else: 
+                pass
+        elif stopConnect in another1Activity:
+            exit()
+        elif no in another1Activity1:
+                pass
+        else: 
+            pass
+    elif stopConnect in interestsResponse:
+        exit()
     else:
         pass
 
@@ -631,9 +756,23 @@ print("\n")
 #------------------------chat bot or coping mechanisms?
 print("Would you like to find a hotline, or look at some coping mechanisms today?")
 chatDecideQ = input("> ")
-chatDecide = chatDecideQ.upper()
+chatDecideUpper = chatDecideQ.upper()
+
+chatDecide = chatDecideUpper.split()
 
 if coping in chatDecide:
+
+    breathingExercise478()
+
+    print("It isn't selfish to do things you love when you aren't feeling good.")
+    time.sleep(2)
+    print("\n")
+
+    interestsFunction()
+
+    goodbye()
+
+elif cope in chatDecide:
 
     breathingExercise478()
 
@@ -683,16 +822,33 @@ elif helpWord in chatDecide:
 
 else:
     print("\n")
-    print("I'm glad you reached out for help. I will ask you some simple questions to help guide you to the correct hotline.")
+    print("I'm glad you reached out for help. I will ask you some questions to help guide you to the correct hotline.")
     time.sleep(4.75)
     print("\n")
     pass
 
+#----------------------------what is the situation - see what we can do with a description.
+print("What is your situation, and how are you feeling?")
+generalSituationQ = input("> ")
+generalSituationUpper = generalSituationQ.upper()
 
-#------------------------are you in immediate danger?
+generalSituation = generalSituationUpper.split()
+
+
+
+
+
+
+
+
+
+
+#-------------------------------------are you in immediate danger?
 print("Are you currently thinking about hurting yourself or others?")
 emergencyQ = input("> ")
-immediateEmergency = emergencyQ.upper()
+immediateEmergencyUpper = emergencyQ.upper()
+
+immediateEmergency = immediateEmergencyUpper.split()
 
 if yes in immediateEmergency:
     print("\n")
@@ -766,7 +922,9 @@ else:
 #------------------------check if they can talk 
 print("Are you able to talk out loud?")
 talkAloudQ = input("> ")
-talkAloud = talkAloudQ.upper()
+talkAloudUpper = talkAloudQ.upper()
+
+talkAloud = talkAloudUpper.split()
 
 if no in talkAloud:
     print("\n")
@@ -884,7 +1042,9 @@ else:
 print("\n")
 print("Are you in a safe environment with people you trust?")
 safeEnvironmentQ = input("> ")
-safeEnvironment = safeEnvironmentQ.upper()
+safeEnvironmentUpper = safeEnvironmentQ.upper()
+
+safeEnvironment = safeEnvironmentUpper.split()
 
 if no in safeEnvironment: 
     print("\n")
@@ -1079,7 +1239,9 @@ else:
 print("\n")
 print("Do you fear that you are putting others in danger?")
 othersSafetyQ = input("> ")
-othersSafety = othersSafetyQ.upper()
+othersSafetyUpper = othersSafetyQ.upper()
+
+othersSafety = othersSafetyUpper.split()
 
 if no in othersSafety:
     print("\n")
@@ -1154,7 +1316,9 @@ else:
 #------------------------identity issues
 print("Are you or someone you know dealing with any identity issues?")
 identityIssuesQ = input("> ")
-identityIssues = identityIssuesQ.upper()
+identityIssuesUpper = identityIssuesQ.upper()
+
+identityIssues = identityIssuesUpper.split()
 
 if yes in identityIssues:
     print("\n")
@@ -1229,7 +1393,9 @@ else:
 #------------------------substance abuse
 print("Are you or someone you know struggling with substance issues: drinking excessively, smoking, etc.?")
 substanceAbuseQ = input("> ")
-substanceAbuse = substanceAbuseQ.upper()
+substanceAbuseUpper = substanceAbuseQ.upper()
+
+substanceAbuse = substanceAbuseUpper.split()
 
 if yes in substanceAbuse:
     print("\n")
@@ -1295,7 +1461,9 @@ else:
 #------------------------eating disorder
 print("Are you or someone you know struggling with an eating disorder or body image?")
 eatingDisorderQ = input("> ")
-eatingDisorder = eatingDisorderQ.upper()
+eatingDisorderUpper = eatingDisorderQ.upper()
+
+eatingDisorder = eatingDisorderUpper.split()
 
 if yes in eatingDisorder:
     print("\n")
@@ -1361,7 +1529,9 @@ else:
 #------------------------runaway/homelessness
 print("Have you or someone you know ran away from home or do not have a home to go to?")
 runawayQ = input("> ")
-runaway = runawayQ.upper()
+runawayUpper = runawayQ.upper()
+
+runaway = runawayUpper.split()
 
 if yes in runaway:
     print("\n")
@@ -1437,7 +1607,9 @@ else:
 #------------------------racial discrimination
 print("Are you being discriminated against due to your race?")
 racialEquityQ = input("> ")
-racialEquity = racialEquityQ.upper()
+racialEquityUpper = racialEquityQ.upper()
+
+racialEquity = racialEquityUpper.split()
 
 if yes in racialEquity:
     print("\n")
@@ -1504,7 +1676,9 @@ else:
 #------------------------general crisis - asking emotions
 print("How are you feeling right now?")
 generalCrisisQ = input("> ")
-generalCrisis = generalCrisisQ.upper()
+generalCrisisUpper = generalCrisisQ.upper()
+
+generalCrisis = generalCrisisUpper.split()
 
 if sad or depressed or empty or numb or bad or useless in generalCrisis:
     print("\n")
@@ -1643,7 +1817,9 @@ else:
 # add an overall question about mood that directly points to the previous hotlines 
 print("Are you feeling better?")
 feelingOverallQ = input("> ")
-feelingOverall = feelingOverallQ.upper()
+feelingOverallUpper = feelingOverallQ.upper()
+
+feelingOverall = feelingOverallUpper.split()
 
 if yes in feelingOverall:
     #------------------------final support/coping mechanisms
