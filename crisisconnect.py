@@ -60,12 +60,14 @@ activities2 = ["Learn a new skill", "Play video games"]
 
 #-------------------------------NEW VARIABLES-----------------------
 #----------------general terms
-hateMyself = "HATE MYSELF" 
+hate = "HATE"
+myself = "MYSELF"
 cantLive = "CANT LIVE"
 dont = "DONT"
 idk = "IDK"
 feel = "FEEL"
-not = "NOT"
+not1 = "NOT"
+im = "IM"
 #----------------domestic abuse
 girlfriend = "GIRLFRIEND"
 boyfriend = "BOYFRIEND"
@@ -74,13 +76,15 @@ gf = "GF"
 partner = "PARTNER"
 wife = "WIFE"
 husband = "HUSBAND"
-spouse - "SPOUSE"
+spouse = "SPOUSE"
 mom = "MOM"
 mother = "MOTHER"
 dad = "DAD"
 father = "FATHER"
 sister = "SISTER"
 brother = "BROTHER"
+grandma = "GRANDMA"
+grandpa = "GRANDPA"
 hit = "HIT"
 hurt = "HURT"
 #---------------Rape, Incest 
@@ -90,16 +94,22 @@ consent = "CONSENT"
 grope = "GROPE"
 make = "MAKE"
 #---------------LGBTQ & identity 
+like = "LIKE"
+love = "LOVE"
+gay = "GAY"
 #----------------substance abuse
 drugs = "DRUGS"
 alcohol = "ALCOHOL"
 vape = "VAPE"
 vaping = "VAPING"
-#-----------------eating disorder
+#-----------------eating disorder/body image issues
 cantEat = "CANT EAT"
 wontEat = "WONT EAT"
 throwUp = "THROW UP"
 body = "BODY"
+fat = "FAT"
+disgusting = "DISGUSTING"
+gross = "GROSS"
 #--------------------------------
 
 
@@ -292,7 +302,7 @@ def breathingExercise478():
 
 def interestsFunction():
     print("What are some things that make you happy?")
-    interestsQ = input("> ")
+    interestsQ = raw_input("> ")
     interests = interestsQ.upper()
 
     interestsResponse = interests.split()
@@ -321,7 +331,7 @@ def interestsFunction():
         print("\n")
 
         print("Do you want another activity?")
-        another1ActivityQ = input("> ")
+        another1ActivityQ = raw_input("> ")
         another1Activity = another1ActivityQ.upper()
 
         if yes in another1Activity:
@@ -333,7 +343,7 @@ def interestsFunction():
             print("\n")
 
             print("Do you want another activity?")
-            another1Activity1Q = input("> ")
+            another1Activity1Q = raw_input("> ")
             another1Activity1 = another1Activity1Q.upper()
 
             if yes in another1Activity1:
@@ -366,7 +376,7 @@ def interestsFunction():
             print("\n")
 
             print("Do you want another activity?")
-            another1Activity1Q = input("> ")
+            another1Activity1Q = raw_input("> ")
             another1Activity1 = another1Activity1Q.upper()
 
             if yes in another1Activity1:
@@ -487,7 +497,7 @@ def interestsFunction():
         print("\n")
 
         print("Do you want another activity?")
-        anotherActivityQ = input("> ")
+        anotherActivityQ = raw_input("> ")
         anotherActivity = anotherActivityQ.upper()
 
         if yes in anotherActivity:
@@ -499,7 +509,7 @@ def interestsFunction():
             print("\n")
 
             print("Do you want another activity?")
-            anotherActivity1Q = input("> ")
+            anotherActivity1Q = raw_input("> ")
             anotherActivity1 = anotherActivity1Q.upper()
 
             if yes in anotherActivity1:
@@ -530,7 +540,7 @@ def interestsFunction():
             print("\n")
 
             print("Do you want another activity?")
-            anotherActivity1Q = input("> ")
+            anotherActivity1Q = raw_input("> ")
             anotherActivity1 = anotherActivity1Q.upper()
 
             if yes in anotherActivity1:
@@ -569,7 +579,7 @@ def interestsFunction():
         print("\n")
 
         print("Do you want another activity?")
-        anotherActivityQ = input("> ")
+        anotherActivityQ = raw_input("> ")
         anotherActivity = anotherActivityQ.upper()
 
         if yes in anotherActivity:
@@ -581,7 +591,7 @@ def interestsFunction():
             print("\n")
 
             print("Do you want another activity?")
-            anotherActivity1Q = input("> ")
+            anotherActivity1Q = raw_input("> ")
             anotherActivity1 = anotherActivity1Q.upper()
 
             if yes in anotherActivity1:
@@ -612,7 +622,7 @@ def interestsFunction():
             print("\n")
 
             print("Do you want another activity?")
-            anotherActivity1Q = input("> ")
+            anotherActivity1Q = raw_input("> ")
             anotherActivity1 = anotherActivity1Q.upper()
 
             if yes in anotherActivity1:
@@ -650,7 +660,7 @@ def interestsFunction():
 
     if abuseWord in interestsResponse:
         print("\n")
-        immediateEmergencyFunction()
+        domesticAbuseFunction()
         print("\n")
         time.sleep(2)
         suicidePrevention()
@@ -696,9 +706,218 @@ def goodbye():
     print("\n")
     exit()
 
+def checkRightGeneral():
+    print("Was this information helpful, or would you like to keep talking?")
+    checkRightGeneralResponse = raw_input("> ")
+    checkRightGeneralAnswer = checkRightGeneralResponse.upper()
+    
+    if wasHelpful in checkRightGeneralAnswer:
+        print("\n")
+        print("I hope you found the help you needed. You are an important part of this world. <3")
+        time.sleep(2)
+        print("\n")
+        print("Goodbye!")
+        print("\n")
+        exit()
+    elif isHelpful in checkRightGeneralAnswer:
+        print("\n")
+        print("I hope you found the help you needed. You are an important part of this world. <3")
+        time.sleep(2)
+        print("\n")
+        print("Goodbye!")
+        print("\n")
+        exit()
+    elif yes in checkRightGeneralAnswer:
+        print("I'm sorry, I didn't quite get that - would you like to continue talking?")
+        generalCheckRightAgainQ = raw_input("> ")
+        generalCheckRightAgain = generalCheckRightAgainQ.upper()
+
+        if yes in generalCheckRightAgain:
+            print("\n")
+            print("Alright, we will continue to talk.")
+            time.sleep(2)
+            print("\n")
+
+        elif yea in generalCheckRightAgain:
+            print("\n")
+            print("Alright, we will continue to talk.")
+            time.sleep(2)
+            print("\n")
+
+        elif no in generalCheckRightAgain:
+            print("\n")
+            print("I hope you found the help you needed. You are an important part of this world. <3")
+            time.sleep(2)
+            print("\n")
+            print("Goodbye!")
+            print("\n")
+            exit()
+
+        elif abuseWord in generalCheckRightAgain:
+            print("\n")
+            domesticAbuseFunction()
+            print("\n")
+            time.sleep(2)
+            suicidePrevention()
+            print("\n")
+            time.sleep(2)
+
+            checkRight()
+
+        elif suicideWord in generalCheckRightAgain:
+            print("\n")
+            immediateEmergencyFunction()
+            print("\n")
+            time.sleep(2)
+            suicidePrevention()
+            print("\n")
+            time.sleep(2)
+
+            checkRight()
+
+        elif helpWord in generalCheckRightAgain:
+            print("\n")
+            immediateEmergencyFunction()
+            print("\n")
+            time.sleep(2)
+            suicidePrevention()
+            print("\n")
+            time.sleep(2)
+
+            checkRight()
+
+        elif stopConnect in generalCheckRightAgain:
+            exit()
+
+        else: 
+            print("\n")
+            print("I'm sorry, I didn't quite get that. We will continue to talk. Remember, if you would like to stop, type 'quit' at anytime.")
+            time.sleep(4)
+            print("\n")
+
+    elif yea in checkRightGeneralAnswer:
+        print("I'm sorry, I didn't quite get that - would you like to continue talking?")
+        generalCheckRightAgain2Q = raw_input("> ")
+        generalCheckRightAgain2 = generalCheckRightAgain2Q.upper()
+
+        if yes in generalCheckRightAgain2:
+            print("\n")
+            print("Alright, we will continue to talk.")
+            time.sleep(2)
+            print("\n")
+
+        elif yea in generalCheckRightAgain2:
+            print("\n")
+            print("Alright, we will continue to talk.")
+            time.sleep(2)
+            print("\n")
+
+        elif no in generalCheckRightAgain2:
+            print("\n")
+            print("I hope you found the help you needed. You are an important part of this world. <3")
+            time.sleep(2)
+            print("\n")
+            print("Goodbye!")
+            print("\n")
+            exit()
+
+        elif abuseWord in generalCheckRightAgain2:
+            print("\n")
+            domesticAbuseFunction()
+            print("\n")
+            time.sleep(2)
+            suicidePrevention()
+            print("\n")
+            time.sleep(2)
+
+            checkRight()
+
+        elif suicideWord in generalCheckRightAgain2:
+            print("\n")
+            immediateEmergencyFunction()
+            print("\n")
+            time.sleep(2)
+            suicidePrevention()
+            print("\n")
+            time.sleep(2)
+
+            checkRight()
+
+        elif helpWord in generalCheckRightAgain2:
+            print("\n")
+            immediateEmergencyFunction()
+            print("\n")
+            time.sleep(2)
+            suicidePrevention()
+            print("\n")
+            time.sleep(2)
+
+            checkRight()
+
+        elif stopConnect in generalCheckRightAgain2:
+            exit()
+            
+        else: 
+            print("\n")
+            print("I'm sorry, I didn't quite get that. We will continue to talk. Remember, if you would like to stop, type 'quit' at anytime.")
+            time.sleep(4)
+            print("\n")
+
+    elif keepTalking in checkRightGeneralAnswer:
+        print("\n")
+        print("Alright, we will continue to talk.")
+        time.sleep(2)
+        print("\n")
+    elif no in checkRightGeneralAnswer:
+        print("\n")
+        print("Alright, we will continue to talk.")
+        time.sleep(2)
+        print("\n")
+
+    elif abuseWord in checkRightGeneralAnswer:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif suicideWord in checkRightGeneralAnswer:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif helpWord in checkRightGeneralAnswer:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif stopConnect in checkRightGeneralAnswer:
+        exit()
+    else: 
+        print("\n")
+        print("I'm sorry, I didn't quite get that. We will continue to talk. Remember, if you would like to stop, type 'quit' at anytime.")
+        time.sleep(4)
+        print("\n")
+
 def checkRight():
     print("Was this information helpful, or would you like to keep talking?")
-    checkRightResponse = input("> ")
+    checkRightResponse = raw_input("> ")
     checkRightAnswer = checkRightResponse.upper()
     
     if wasHelpful in checkRightAnswer:
@@ -743,22 +962,56 @@ def checkRight():
         print("Alright, we will continue to talk.")
         time.sleep(2)
         print("\n")
+
+    elif abuseWord in checkRightAnswer:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif suicideWord in checkRightAnswer:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif helpWord in checkRightAnswer:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
     elif stopConnect in checkRightAnswer:
         exit()
     else: 
-        pass
+        print("\n")
+        print("I'm sorry, I didn't quite get that. We will continue to talk. Remember, if you would like to stop, type 'quit' at anytime.")
+        time.sleep(4)
+        print("\n")
 
 
 #------------------------introduction
 print("\n")
-print("Welcome to CrisisConnect. My name is Cami, and I will be here to guide you through your crisis.")
+print("Welcome to CrisisConnect. I will be here to guide you through your crisis.")
 time.sleep(3.75)
 print("\n")
 print("Throughout this process, I will ask simple questions that will help clear your mind and lead you to the right helpline.")
 time.sleep(4.25)
-print("\n")
-print("For the best and easiest experience, I recommend responding with 'yes', 'no', or the options I provide.")
-time.sleep(3.75)
 print("\n")
 print("If you want to stop talking, type and enter 'quit' at anytime.")
 time.sleep(3.75)
@@ -766,10 +1019,8 @@ print("\n")
 
 #------------------------chat bot or coping mechanisms?
 print("Would you like to find a hotline, or look at some coping mechanisms today?")
-chatDecideQ = input("> ")
-chatDecideUpper = chatDecideQ.upper()
-
-chatDecide = chatDecideUpper.split()
+chatDecideQ = raw_input("> ")
+chatDecide = chatDecideQ.upper()
 
 if coping in chatDecide:
 
@@ -800,7 +1051,7 @@ elif stopConnect in chatDecide:
 
 elif abuseWord in chatDecide:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -838,28 +1089,1682 @@ else:
     print("\n")
     pass
 
-#----------------------------what is the situation - see what we can do with a description.
+#----------------------------what is the situation - see what it can do with a description. 
 print("What is your situation, and how are you feeling?")
-generalSituationQ = input("> ")
-generalSituationUpper = generalSituationQ.upper()
-
-generalSituation = generalSituationUpper.split()
-
-print("I’m sorry that’s happening to you. How does this make you feel?")
+generalSituationQ = raw_input("> ")
+generalSituation = generalSituationQ.upper()
 
 
+if stopConnect in generalSituation:
+    exit()
+elif mom in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
 
+        checkRight()
 
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
 
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel1Q = raw_input("> ")
+        howFeel1 = howFeel1Q.upper()
 
+        if sad or depressed or empty or numb or bad or useless in howFeel1:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel1Q = raw_input("> ")
+            generalCrisisYouthFeel1 = generalCrisisYouthFeel1Q.upper()
+
+            if yes in generalCrisisYouthFeel1:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel1:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel1:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel1:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel1:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel1:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel1:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif mother in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel2Q = raw_input("> ")
+        howFeel2 = howFeel2Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel2:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel2Q = raw_input("> ")
+            generalCrisisYouthFeel2 = generalCrisisYouthFeel2Q.upper()
+
+            if yes in generalCrisisYouthFeel2:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel2:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel2:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel2:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel2:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel2:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel2:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif father in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel3Q = raw_input("> ")
+        howFeel3 = howFeel3Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel3:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel3Q = raw_input("> ")
+            generalCrisisYouthFeel3 = generalCrisisYouthFeel3Q.upper()
+
+            if yes in generalCrisisYouthFeel3:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel3:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel3:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel3:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel3:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel3:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel3:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif grandma in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel4Q = raw_input("> ")
+        howFeel4 = howFeel4Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel4:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel4Q = raw_input("> ")
+            generalCrisisYouthFeel4 = generalCrisisYouthFeel4Q.upper()
+
+            if yes in generalCrisisYouthFeel4:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel4:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel4:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel4:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel4:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel4:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel4:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif grandpa in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel6Q = raw_input("> ")
+        howFeel6 = howFeel6Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel6:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel6Q = raw_input("> ")
+            generalCrisisYouthFeel6 = generalCrisisYouthFeel6Q.upper()
+
+            if yes in generalCrisisYouthFeel6:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel6:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel6:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel6:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel6:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel6:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel6:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif dad in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel7Q = raw_input("> ")
+        howFeel7 = howFeel7Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel7:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel7Q = raw_input("> ")
+            generalCrisisYouthFeel7 = generalCrisisYouthFeel7Q.upper()
+
+            if yes in generalCrisisYouthFeel7:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel7:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel7:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel7:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel7:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel7:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel7:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif sister in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel8Q = raw_input("> ")
+        howFeel8 = howFeel8Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel8:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel8Q = raw_input("> ")
+            generalCrisisYouthFeel8 = generalCrisisYouthFeel8Q.upper()
+
+            if yes in generalCrisisYouthFeel8:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel8:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel8:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel8:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel8:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel8:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel8:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif brother in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel9Q = raw_input("> ")
+        howFeel9 = howFeel9Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel9:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel9Q = raw_input("> ")
+            generalCrisisYouthFeel9 = generalCrisisYouthFeel9Q.upper()
+
+            if yes in generalCrisisYouthFeel9:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel9:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel9:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel9:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel9:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel9:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel9:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif wife in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel10Q = raw_input("> ")
+        howFeel10 = howFeel10Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel1:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel10Q = raw_input("> ")
+            generalCrisisYouthFeel10 = generalCrisisYouthFeel10Q.upper()
+
+            if yes in generalCrisisYouthFeel10:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel10:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel10:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel10:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel10:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel10:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel10:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif husband in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel11Q = raw_input("> ")
+        howFeel11 = howFeel11Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel11:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel11Q = raw_input("> ")
+            generalCrisisYouthFeel11 = generalCrisisYouthFeel11Q.upper()
+
+            if yes in generalCrisisYouthFeel11:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel11:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel11:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel11:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel11:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel11:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel11:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif spouse in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel12Q = raw_input("> ")
+        howFeel12 = howFeel12Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel12:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel12Q = raw_input("> ")
+            generalCrisisYouthFeel12 = generalCrisisYouthFeel12Q.upper()
+
+            if yes in generalCrisisYouthFeel12:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel12:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel12:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel12:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel12:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel12:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel12:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif body in generalSituation: 
+    if hate in generalSituation:
+        print("\n")
+        eatingDisorderFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif gross in generalSituation:
+        print("\n")
+        eatingDisorderFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel13Q = raw_input("> ")
+        howFeel13 = howFeel13Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel1:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel13Q = raw_input("> ")
+            generalCrisisYouthFeel13 = generalCrisisYouthFeel13Q.upper()
+
+            if yes in generalCrisisYouthFeel13:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel13:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel13:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel13:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel13:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel13:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel13:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif family in generalSituation:
+    if hurt or hit in generalSituation:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    elif touch or grope in generalSituation:
+        print("\n")
+        rainnFunction()
+        print("\n")
+        time.sleep(2)
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+        
+    else: 
+        print("\n")
+        print("I'm sorry that's happening.")
+        time.sleep(2)
+        print("\n")
+        print("How is this making you feel?")
+        howFeel14Q = raw_input("> ")
+        howFeel14 = howFeel14Q.upper()
+
+        if sad or depressed or empty or numb or bad or useless in howFeel14:
+            print("\n")
+            print("Would you like to talk to another teen about your feelings?")
+            generalCrisisYouthFeel14Q = raw_input("> ")
+            generalCrisisYouthFeel14 = generalCrisisYouthFeel14Q.upper()
+
+            if yes in generalCrisisYouthFeel14:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif yea in generalCrisisYouthFeel14:
+                print("\n")
+                youthLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif no in generalCrisisYouthFeel14:
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+            elif stopConnect in generalCrisisYouthFeel14:
+                exit()
+
+            elif abuseWord in generalCrisisYouthFeel14:
+                print("\n")
+                domesticAbuseFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif suicideWord in generalCrisisYouthFeel14:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            elif helpWord in generalCrisisYouthFeel14:
+                print("\n")
+                immediateEmergencyFunction()
+                print("\n")
+                time.sleep(2)
+                suicidePrevention()
+                print("\n")
+                time.sleep(2)
+
+                checkRight()
+
+            else: 
+                print("\n")
+                namiFunction()
+                time.sleep(2)
+                print("\n")
+                textLineFunction()
+                time.sleep(2)
+                print("\n")
+
+                checkRight()
+
+        else:
+            print("\n")
+            print("I will ask you some yes or no questions to help guide you to the correct hotline.")
+            time.sleep(4.75)
+            print("\n")
+            pass
+
+elif grope or nonconsensual:
+    print("\n")
+    rainnFunction()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif fat or wontEat or throwUp or cantEat in generalSituation: 
+    print("\n")
+    eatingDisorderFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif sad or depressed or empty or numb or bad or useless in generalSituation:
+    print("\n")
+    print("Would you like to talk to another teen about your feelings?")
+    generalCrisisYouthFeel15Q = raw_input("> ")
+    generalCrisisYouthFeel15 = generalCrisisYouthFeel15Q.upper()
+
+    if yes in generalCrisisYouthFeel15:
+        print("\n")
+        youthLineFunction()
+        time.sleep(2)
+        print("\n")
+
+        checkRight()
+
+    elif yea in generalCrisisYouthFeel15:
+        print("\n")
+        youthLineFunction()
+        time.sleep(2)
+        print("\n")
+
+        checkRight()
+
+    elif no in generalCrisisYouthFeel15:
+        print("\n")
+        namiFunction()
+        time.sleep(2)
+        print("\n")
+        textLineFunction()
+        time.sleep(2)
+        print("\n")
+
+        checkRight()
+
+    elif stopConnect in generalCrisisYouthFeel15:
+        exit()
+
+    elif abuseWord in generalCrisisYouthFeel15:
+        print("\n")
+        domesticAbuseFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif suicideWord in generalCrisisYouthFeel15:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    elif helpWord in generalCrisisYouthFeel15:
+        print("\n")
+        immediateEmergencyFunction()
+        print("\n")
+        time.sleep(2)
+        suicidePrevention()
+        print("\n")
+        time.sleep(2)
+
+        checkRight()
+
+    else: 
+        print("\n")
+        namiFunction()
+        time.sleep(2)
+        print("\n")
+        textLineFunction()
+        time.sleep(2)
+        print("\n")
+
+        checkRight()
+
+elif abuseWord in generalSituation:
+    print("\n")
+    domesticAbuseFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif suicideWord in generalSituation:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+elif helpWord in generalSituation:
+    print("\n")
+    immediateEmergencyFunction()
+    print("\n")
+    time.sleep(2)
+    suicidePrevention()
+    print("\n")
+    time.sleep(2)
+
+    checkRight()
+
+else:
+    print("\n")
+    print("I'm sorry that's happening to you.")
+    time.sleep(2)
+    print("\n")
+    print("I'll be asking some yes or no questions to help you to the best of my abilities.")
+    time.sleep(2)
+    print("\n")
 
 
 #-------------------------------------are you in immediate danger?
 print("Are you currently thinking about hurting yourself or others?")
-emergencyQ = input("> ")
-immediateEmergencyUpper = emergencyQ.upper()
-
-immediateEmergency = immediateEmergencyUpper.split()
+emergencyQ = raw_input("> ")
+immediateEmergency = emergencyQ.upper()
 
 if yes in immediateEmergency:
     print("\n")
@@ -895,7 +2800,7 @@ elif stopConnect in immediateEmergency:
 
 elif abuseWord in immediateEmergency:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -932,10 +2837,8 @@ else:
 
 #------------------------check if they can talk 
 print("Are you able to talk out loud?")
-talkAloudQ = input("> ")
-talkAloudUpper = talkAloudQ.upper()
-
-talkAloud = talkAloudUpper.split()
+talkAloudQ = raw_input("> ")
+talkAloud = talkAloudQ.upper()
 
 if no in talkAloud:
     print("\n")
@@ -945,7 +2848,7 @@ if no in talkAloud:
     #check right
 
     print("Are you completely sure you still cannot talk aloud?")
-    checkTalkAloudQ = input("> ")
+    checkTalkAloudQ = raw_input("> ")
     checkTalkAloud = checkTalkAloudQ.upper()
 
     if no in checkTalkAloud:
@@ -972,7 +2875,7 @@ if no in talkAloud:
 
     elif abuseWord in checkTalkAloud:
         print("\n")
-        immediateEmergencyFunction()
+        domesticAbuseFunction()
         print("\n")
         time.sleep(2)
         suicidePrevention()
@@ -1014,7 +2917,7 @@ elif stopConnect in talkAloud:
 
 elif abuseWord in talkAloud:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -1052,15 +2955,13 @@ else:
 #------------------------domestic abuse
 print("\n")
 print("Are you in a safe environment with people you trust?")
-safeEnvironmentQ = input("> ")
-safeEnvironmentUpper = safeEnvironmentQ.upper()
-
-safeEnvironment = safeEnvironmentUpper.split()
+safeEnvironmentQ = raw_input("> ")
+safeEnvironment = safeEnvironmentQ.upper()
 
 if no in safeEnvironment: 
     print("\n")
     print("Is a family member, romantic partner, or platonic partner causing you to be in danger?")
-    domesticAbuseQ = input("> ")
+    domesticAbuseQ = raw_input("> ")
     domesticAbuse = domesticAbuseQ.upper()
 
     if yes in domesticAbuse:
@@ -1092,7 +2993,7 @@ if no in safeEnvironment:
     elif no in domesticAbuse:
         print("\n")
         print("Are you fearful for the safety of yourself or others?")
-        abuseQ = input("> ")
+        abuseQ = raw_input("> ")
         abuse = abuseQ.upper()
 
         if yes or yea in abuse:
@@ -1126,7 +3027,7 @@ if no in safeEnvironment:
         
         elif abuseWord in abuse:
             print("\n")
-            immediateEmergencyFunction()
+            domesticAbuseFunction()
             print("\n")
             time.sleep(2)
             suicidePrevention()
@@ -1165,7 +3066,7 @@ if no in safeEnvironment:
     
     elif abuseWord in domesticAbuse:
         print("\n")
-        immediateEmergencyFunction()
+        domesticAbuseFunction()
         print("\n")
         time.sleep(2)
         suicidePrevention()
@@ -1211,7 +3112,7 @@ elif stopConnect in safeEnvironment:
 
 elif abuseWord in safeEnvironment:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -1249,10 +3150,8 @@ else:
 #------------------------hurting others
 print("\n")
 print("Do you fear that you are putting others in danger?")
-othersSafetyQ = input("> ")
-othersSafetyUpper = othersSafetyQ.upper()
-
-othersSafety = othersSafetyUpper.split()
+othersSafetyQ = raw_input("> ")
+othersSafety = othersSafetyQ.upper()
 
 if no in othersSafety:
     print("\n")
@@ -1287,7 +3186,7 @@ elif stopConnect in othersSafety:
 
 elif abuseWord in othersSafety:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -1326,10 +3225,8 @@ else:
 
 #------------------------identity issues
 print("Are you or someone you know dealing with any identity issues?")
-identityIssuesQ = input("> ")
-identityIssuesUpper = identityIssuesQ.upper()
-
-identityIssues = identityIssuesUpper.split()
+identityIssuesQ = raw_input("> ")
+identityIssues = identityIssuesQ.upper()
 
 if yes in identityIssues:
     print("\n")
@@ -1364,7 +3261,7 @@ elif stopConnect in identityIssues:
 
 elif abuseWord in identityIssues:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -1403,10 +3300,8 @@ else:
 
 #------------------------substance abuse
 print("Are you or someone you know struggling with substance issues: drinking excessively, smoking, etc.?")
-substanceAbuseQ = input("> ")
-substanceAbuseUpper = substanceAbuseQ.upper()
-
-substanceAbuse = substanceAbuseUpper.split()
+substanceAbuseQ = raw_input("> ")
+substanceAbuse = substanceAbuseQ.upper()
 
 if yes in substanceAbuse:
     print("\n")
@@ -1433,7 +3328,7 @@ elif stopConnect in substanceAbuse:
 
 elif abuseWord in substanceAbuse:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -1471,10 +3366,8 @@ else:
 
 #------------------------eating disorder
 print("Are you or someone you know struggling with an eating disorder or body image?")
-eatingDisorderQ = input("> ")
-eatingDisorderUpper = eatingDisorderQ.upper()
-
-eatingDisorder = eatingDisorderUpper.split()
+eatingDisorderQ = raw_input("> ")
+eatingDisorder = eatingDisorderQ.upper()
 
 if yes in eatingDisorder:
     print("\n")
@@ -1501,7 +3394,7 @@ elif stopConnect in eatingDisorder:
 
 elif abuseWord in eatingDisorder:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -1539,10 +3432,8 @@ else:
 
 #------------------------runaway/homelessness
 print("Have you or someone you know ran away from home or do not have a home to go to?")
-runawayQ = input("> ")
-runawayUpper = runawayQ.upper()
-
-runaway = runawayUpper.split()
+runawayQ = raw_input("> ")
+runaway = runawayQ.upper()
 
 if yes in runaway:
     print("\n")
@@ -1579,7 +3470,7 @@ elif stopConnect in runaway:
 
 elif abuseWord in runaway:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -1617,10 +3508,8 @@ else:
 
 #------------------------racial discrimination
 print("Are you being discriminated against due to your race?")
-racialEquityQ = input("> ")
-racialEquityUpper = racialEquityQ.upper()
-
-racialEquity = racialEquityUpper.split()
+racialEquityQ = raw_input("> ")
+racialEquity = racialEquityQ.upper()
 
 if yes in racialEquity:
     print("\n")
@@ -1643,7 +3532,7 @@ elif stopConnect in racialEquity:
 
 elif abuseWord in racialEquity:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -1686,15 +3575,13 @@ else:
 
 #------------------------general crisis - asking emotions
 print("How are you feeling right now?")
-generalCrisisQ = input("> ")
-generalCrisisUpper = generalCrisisQ.upper()
-
-generalCrisis = generalCrisisUpper.split()
+generalCrisisQ = raw_input("> ")
+generalCrisis = generalCrisisQ.upper()
 
 if sad or depressed or empty or numb or bad or useless in generalCrisis:
     print("\n")
     print("Would you like to talk to another teen about your feelings?")
-    generalCrisisYouthQ = input("> ")
+    generalCrisisYouthQ = raw_input("> ")
     generalCrisisYouth = generalCrisisYouthQ.upper()
 
     if yes in generalCrisisYouth:
@@ -1718,6 +3605,9 @@ if sad or depressed or empty or numb or bad or useless in generalCrisis:
         namiFunction()
         time.sleep(2)
         print("\n")
+        textLineFunction()
+        time.sleep(2)
+        print("\n")
 
         checkRight()
 
@@ -1726,7 +3616,7 @@ if sad or depressed or empty or numb or bad or useless in generalCrisis:
 
     elif abuseWord in generalCrisisYouth:
         print("\n")
-        immediateEmergencyFunction()
+        domesticAbuseFunction()
         print("\n")
         time.sleep(2)
         suicidePrevention()
@@ -1762,6 +3652,9 @@ if sad or depressed or empty or numb or bad or useless in generalCrisis:
         namiFunction()
         time.sleep(2)
         print("\n")
+        textLineFunction()
+        time.sleep(2)
+        print("\n")
 
         checkRight()
 
@@ -1789,7 +3682,7 @@ elif stopConnect in generalCrisis:
 
 elif abuseWord in generalCrisis:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
@@ -1827,10 +3720,8 @@ else:
 
 # add an overall question about mood that directly points to the previous hotlines 
 print("Are you feeling better?")
-feelingOverallQ = input("> ")
-feelingOverallUpper = feelingOverallQ.upper()
-
-feelingOverall = feelingOverallUpper.split()
+feelingOverallQ = raw_input("> ")
+feelingOverall = feelingOverallQ.upper()
 
 if yes in feelingOverall:
     #------------------------final support/coping mechanisms
@@ -1875,7 +3766,7 @@ elif stopConnect in feelingOverall:
 
 elif abuseWord in feelingOverall:
     print("\n")
-    immediateEmergencyFunction()
+    domesticAbuseFunction()
     print("\n")
     time.sleep(2)
     suicidePrevention()
